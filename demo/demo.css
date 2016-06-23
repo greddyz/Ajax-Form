@@ -1,0 +1,12 @@
+/*! Theme styles */
+.form-container {
+  margin-top: 100px; }
+
+.af-loader {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  content: '';
+  width: 16px;
+  height: 16px;
+  background: url(../lib/mail/images/loading.gif) no-repeat; }

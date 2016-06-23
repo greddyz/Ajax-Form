@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Ajax Форма обратной связи</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="demo.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <h1 class="text-center">Форма обратной связи</h1>
+            <form id="form" method="post" action="/">
+              <input type="text" name="antsm" value="" class="hidden">
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Имя" aria-required="true" value="" class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="text" name="email" placeholder="Email" value="" class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="text" name="phone" placeholder="Телефон" value="" class="form-control">
+              </div>
+              <div class="form-group">
+                <textarea name="message" placeholder="Сообщение" class="form-control"></textarea>
+              </div>
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-lg btn-primary">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../lib/jquery-2.2.4.min.js"></script>
+    <script src="../dist/jquery.ajaxform.min.js"></script>
+    <script>
+      $('#form').ajaxForm({
+        'url': '../lib/mail/mail.php',
+        'debug': true
+      });
+    </script>
+
+  </body>
+</html>
