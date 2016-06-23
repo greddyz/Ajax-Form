@@ -1,8 +1,5 @@
 <?php
 /**
- * todo:
- * валидация email с . в адресе
- * доп адрес для отправки reply
  *
  */
     // ajax request only
@@ -11,8 +8,6 @@
     require('config.php');
     require('class.template.php');
     require('../phpmailer/PHPMailerAutoload.php');
-
-
 
     parse_str($_POST['formData'], $form_data);
 
@@ -98,7 +93,6 @@
 
         die(json_encode($res, JSON_UNESCAPED_UNICODE));
     }
-
 
 
     function checkEmail($email) {
